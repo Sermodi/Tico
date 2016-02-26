@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        String url ="http://tico.sermodi.webfactional.com/rest-auth/login/";
+        String url ="http://tico.sermodi.webfactional.com/usuarios/2";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
+
                         text.setText("Hola " + "Nacho");
                     }
                 },
