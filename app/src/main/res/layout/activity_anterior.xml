@@ -16,21 +16,11 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Actividad Anterior"
-            android:id="@+id/anterior"
-            android:background="@drawable/flecha_izq"
-            android:layout_weight="0.1"
-            style="?android:borderlessButtonStyle"
-            android:paddingLeft="42dp" />
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:id="@+id/img_tarea"
-            android:src="@drawable/saludo"
+            android:src="@drawable/despertar"
             android:contentDescription="Imagen de tarea"
             android:layout_weight="0.4" />
 
@@ -38,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Actividad actual"
+            android:text="Levantarse"
             android:id="@+id/actual"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.1" />
@@ -50,30 +40,13 @@
             android:weightSum="1"
             android:layout_weight="0.1">
 
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:id="@+id/buttonSi"
-                android:src="@drawable/tick"
-                android:adjustViewBounds="true"
-                android:layout_weight="0.5"
-                android:scaleType="fitCenter"/>
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:id="@+id/buttonNo"
-                android:src="@drawable/cruz"
-                android:adjustViewBounds="true"
-                android:layout_weight="0.5"
-                android:scaleType="fitCenter"/>
         </LinearLayout>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Actividad Siguiente"
-            android:id="@+id/siguiente"
+            android:text="Actividad Actual"
+            android:id="@+id/button3"
             android:layout_gravity="right"
             android:layout_weight="0.1"
             android:background="@drawable/flecha"

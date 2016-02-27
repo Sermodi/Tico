@@ -1,8 +1,11 @@
 package com.webfaction.sermodi.tico;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -26,6 +29,7 @@ public class RutinaActivity extends AppCompatActivity {
 
     TextView anterior, siguiente, actual;
     ImageButton botonSi, botonNo;
+    Button anteriorb, siguienteb;
     ImageView accion;
     private RequestQueue queue;
 
@@ -37,6 +41,38 @@ public class RutinaActivity extends AppCompatActivity {
         actual = (TextView) findViewById(R.id.actual);
         accion = (ImageView) findViewById(R.id.img_tarea);
         botonSi = (ImageButton) findViewById(R.id.buttonSi);
+        botonSi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                botonSi.setVisibility(View.INVISIBLE);
+                botonNo.setVisibility(View.INVISIBLE);
+            }
+        });
+        botonNo = (ImageButton) findViewById(R.id.buttonNo);
+        botonNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                botonSi.setVisibility(View.INVISIBLE);
+                botonNo.setVisibility(View.INVISIBLE);
+            }
+        });
+        anteriorb = (Button) findViewById(R.id.anterior);
+        siguienteb = (Button) findViewById(R.id.anterior);
+        anteriorb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(RutinaActivity.this,anteriorActivity.class);
+                startActivity(i);
+            }
+        });
+        siguienteb= (Button) findViewById(R.id.siguiente);
+        siguienteb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RutinaActivity.this, siguienteActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -60,8 +96,8 @@ public class RutinaActivity extends AppCompatActivity {
 
                         Context context = accion.getContext();
                         int id = context.getResources().getIdentifier(strAccion.toLowerCase(), "drawable", context.getPackageName());
-                        accion.setImageResource(id);
-                        actual.setText(properties.getProperty("descripcion"));
+                        accion.setImageResource(R.drawable.desayunar);
+                        actual.setText("Desayunar");
                     }
                 },
                 new Response.ErrorListener() {

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        String url ="http://tico.sermodi.webfactional.com/usuarios/2";
+        String url ="http://tico.sermodi.webfactional.com/usuarios/";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                text.setText("Cargando...");
+                text.setText("Hola NACHO!");
             }
         }
         ){
