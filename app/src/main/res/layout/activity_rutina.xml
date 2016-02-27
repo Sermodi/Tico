@@ -49,13 +49,13 @@
             android:weightSum="1"
             android:layout_weight="0.1">
 
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonSi"
                 android:layout_weight="0.5" />
 
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonNo"

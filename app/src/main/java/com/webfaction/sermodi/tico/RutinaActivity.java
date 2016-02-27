@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,7 +25,7 @@ import java.util.Properties;
 public class RutinaActivity extends AppCompatActivity {
 
     TextView anterior, siguiente, actual;
-    Button botonSi, botonNo;
+    ImageButton botonSi, botonNo;
     ImageView accion;
     private RequestQueue queue;
 
@@ -35,6 +36,7 @@ public class RutinaActivity extends AppCompatActivity {
         queue = Volley.newRequestQueue(this);
         actual = (TextView) findViewById(R.id.actual);
         accion = (ImageView) findViewById(R.id.img_tarea);
+        botonSi = (ImageButton) findViewById(R.id.buttonSi);
     }
 
     @Override
